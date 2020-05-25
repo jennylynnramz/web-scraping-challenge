@@ -1,0 +1,124 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mars is the best planet</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>  
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4" style="color: maroon;"><center>Mission to Mars</center></h1>
+          <p class="lead">
+            <!-- #button time   -->
+            <center>
+                <button type="button" class="btn btn-outline-danger btn-lg"><a href="/scrape"><h4>Click here for the freshest Mars news</h4></a></button>
+            </center>
+
+          </p>
+        </div>
+      </div>
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="well">
+            <h3 style="text-align: center;"><b>Featured Mars Image:</b></h3>
+            <center><img src="{{yeet.featured_image_url}}"></center>
+            
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-5">
+                <div class="well">
+                    <h1><center>Current Weather Conditions On The Red Planet:</center></h1>
+                    <hr>
+                    <h5><b>{{yeet.mars_weather}}</b></h5>
+                    <br />
+                </div>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="well">
+                    <h3><center>Check out these cool facts!</center></h3>
+                    <hr>
+                    <center>{{yeet.mars_facts_html_table|safe}}</center>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="well well-lg">
+            <div style="padding-left: 10%; padding-right: 10%;">
+            <h2>Latest Mars News:</h2><br>
+            <h3>{{yeet.news_title_text}}</h3>
+            <h4>{{yeet.news_paragraph_text}}</h4></div>
+    </div>
+
+</div>
+
+
+<!-- images of the hemispheres -->
+
+<div class="row">
+    <center><h1>Hemispheres of Mars</h1></center>
+</div>
+<hr>
+<br>
+<div class="row">
+    <img style="width: 50%; float: left; padding-left: 10%; padding-right: 5%;" src="{{yeet.hemisphere_image_urls[0].img_url}}">
+<!-- row 1, col2 -->
+    <img class="img-responsive" style="width: 50%; float: right; padding-left: 5%; padding-right: 10%;" src="{{yeet.hemisphere_image_urls[1].img_url}}">
+</div>
+
+<div class="row">
+
+    <div class="col-lg-6">
+        <center><h2 style="padding-left: 10%;">{{yeet.hemisphere_image_urls[0].title}}</h2></center>
+    </div>
+    <div class="col-lg-6">
+        <center><h2 style="padding-right: 10%;">{{yeet.hemisphere_image_urls[1].title}}</h2></center>
+    </div>
+
+</div>
+
+<!-- SECOND SET OF PICTURES STARTS NOW -->
+
+<div class="row">
+<!-- row 2, col 1 -->   
+<div class="col-6">
+    <img style="width: 50%; float: left; padding-left: 10%; padding-right: 5%;" src="{{yeet.hemisphere_image_urls[2].img_url}}">
+</div>
+<!-- row 2, col2 -->
+<div class="col-6">
+    <img style="width: 50%; float: right; padding-left: 5%; padding-right: 10%;" src="{{yeet.hemisphere_image_urls[3].img_url}}">
+</div>
+</div>
+
+<div class="row">
+
+    <div class="col-lg-6">
+        <center><h2 style="padding-left: 10%;">{{yeet.hemisphere_image_urls[2].title}}</h2></center>
+    </div>
+    <div class="col-lg-6">
+        <center><h2 style="padding-right: 10%;">{{yeet.hemisphere_image_urls[3].title}}</h2></center>
+    </div>
+
+</div>
+
+<!-- test test test test end end end  -->
+
+<!-- end images of the hemispheres -->
+
+
+
+
+
+</body>
+
+</html>
